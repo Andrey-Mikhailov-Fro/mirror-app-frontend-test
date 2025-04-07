@@ -3,7 +3,7 @@ import { Post } from "../types/post";
 import { ACCUMULATE_NAVIGATION_TYPES } from "../types/layout";
 import SettingsStore from "./LayoutSettingsStore";
 
-const API_URL = "http://localhost:4000";
+const API_URL = import.meta.env.VITE_API_BASE_URL;
 
 interface ApiResponse {
   data: Post[];

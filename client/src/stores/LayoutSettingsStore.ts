@@ -1,7 +1,7 @@
 import { makeAutoObservable, runInAction } from "mobx";
 import { Settings } from "../types/layout";
 
-const API_URL = "http://localhost:4000";
+const API_URL = import.meta.env.VITE_API_BASE_URL;
 
 const fetchSettingsFromApi = async (): Promise<Settings> => {
   const response = await fetch(`${API_URL}/settings`, {
